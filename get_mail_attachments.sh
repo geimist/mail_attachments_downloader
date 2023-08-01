@@ -118,8 +118,8 @@ if ! python3 -m pip --version > /dev/null  2>&1 ; then
 fi
 
 if python3 -m pip list 2>&1 | grep -q "version.*is available" ; then
-    printf "%s\n" "${log_indent}  pip already installed ($(python3 -m pip --version)) / upgrade available ..."
-    python3 -m pip install --upgrade pip | sed -e "s/^/${log_indent}  /g"
+    printf "%s\n" "pip already installed ($(python3 -m pip --version)) / upgrade available ..."
+    python3 -m pip install --upgrade pip
 fi
 
 # check / install python modules:
